@@ -1,0 +1,9 @@
+{
+  "name": "tarkovsky-discord-bot",
+  "version": "1.0.0",
+  "description": "Escape from Tarkov bot for Discord channels",
+  "main": "index.js",
+  "repository": "https://github.com/Deevian/tarkovsky-discord-bot",
+  "author": "João Abreu",
+  "license": "MIT"
+}
