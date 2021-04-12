@@ -7,8 +7,9 @@
 	"author": "João Abreu",
 	"license": "MIT",
 	"scripts": {
-		"start": "node index.js",
-		"lint": "pretty-quick --staged && lint-staged"
+		"start": "node ./src/index.js",
+		"lint": "pretty-quick --staged && lint-staged",
+		"prepare": "husky install"
 	},
 	"dependencies": {
 		"discord.js": "^12.5.3"
