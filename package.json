@@ -1,9 +1,32 @@
 {
-  "name": "tarkovsky-discord-bot",
-  "version": "1.0.0",
-  "description": "Escape from Tarkov bot for Discord channels",
-  "main": "index.js",
-  "repository": "https://github.com/Deevian/tarkovsky-discord-bot",
-  "author": "João Abreu",
-  "license": "MIT"
+	"name": "tarkovsky-discord-bot",
+	"version": "1.0.0",
+	"description": "Escape from Tarkov bot for Discord channels",
+	"main": "index.js",
+	"repository": "https://github.com/Deevian/tarkovsky-discord-bot",
+	"author": "João Abreu",
+	"license": "MIT",
+	"scripts": {
+		"start": "node index.js",
+		"lint": "pretty-quick --staged && lint-staged"
+	},
+	"dependencies": {
+		"discord.js": "^12.5.3"
+	},
+	"devDependencies": {
+		"eslint": "^7.24.0",
+		"eslint-config-airbnb-base": "^14.2.1",
+		"eslint-config-prettier": "^8.1.0",
+		"eslint-plugin-prettier": "^3.3.1",
+		"husky": "^6.0.0",
+		"lint-staged": ">=10",
+		"prettier": "^2.2.1",
+		"pretty-quick": "^3.1.0"
+	},
+	"lint-staged": {
+		"*.js": "eslint --fix"
+	},
+	"hooks": {
+		"pre-commit": "yarn lint"
+	}
 }

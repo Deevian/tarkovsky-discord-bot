@@ -1,2 +1,5 @@
-.token
 yarn-error.log
+config.json
+.idea
+node_modules
+stats
