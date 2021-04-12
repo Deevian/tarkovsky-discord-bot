@@ -9,7 +9,8 @@
 	"scripts": {
 		"start": "node ./src/index.js",
 		"lint": "pretty-quick --staged && lint-staged",
-		"prepare": "husky install"
+		"prepare": "husky install",
+		"postinstall": "husky install"
 	},
 	"dependencies": {
 		"discord.js": "^12.5.3"
@@ -26,8 +27,5 @@
 	},
 	"lint-staged": {
 		"*.js": "eslint --fix"
-	},
-	"hooks": {
-		"pre-commit": "yarn lint"
 	}
 }
