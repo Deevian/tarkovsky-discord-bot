@@ -1,0 +1,105 @@
+[
+	{
+		"name": "tarkov",
+		"description": "Commands related to Escape from Tarkov",
+		"options": [
+			{
+				"name": "team-kill",
+				"description": "List or report team kills",
+				"type": 2,
+				"options": [
+					{
+						"name": "since",
+						"description": "Time since last incident",
+						"type": 1
+					},
+					{
+						"name": "latest",
+						"description": "Information of the lastest tragedy",
+						"type": 1
+					},
+					{
+						"name": "top",
+						"description": "List the most dangerous cowboys of the wild west",
+						"type": 1
+					},
+					{
+						"name": "memorial",
+						"description": "A moment of silence for the kind souls who sacrificed their lives",
+						"type": 1
+					},
+					{
+						"name": "stats",
+						"description": "List the statistics for a given player",
+						"type": 1,
+						"options": [
+							{
+								"name": "player",
+								"description": "The player to get the statistics for",
+								"type": 6,
+								"required": true
+							}
+						]
+					},
+					{
+						"name": "report",
+						"description": "Report a team kill",
+						"type": 1,
+						"options": [
+							{
+								"name": "murderer",
+								"description": "The person who did the killing",
+								"type": 6,
+								"required": true
+							},
+							{
+								"name": "victim",
+								"description": "The person who did the dying",
+								"type": 6,
+								"required": true
+							},
+							{
+								"name": "map",
+								"description": "The location where the thing went down",
+								"type": 3,
+								"required": true,
+								"choices": [
+									{
+										"name": "Interchange",
+										"value": "interchange"
+									},
+									{
+										"name": "Customs",
+										"value": "customs"
+									},
+									{
+										"name": "Shoreline",
+										"value": "shoreline"
+									},
+									{
+										"name": "Reserve",
+										"value": "reserve"
+									},
+									{
+										"name": "Factory",
+										"value": "factory"
+									},
+									{
+										"name": "Labs",
+										"value": "labs"
+									}
+								]
+							},
+							{
+								"name": "info",
+								"description": "Additional info on the event",
+								"type": 3,
+								"required": false
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]

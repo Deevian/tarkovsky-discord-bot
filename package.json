@@ -7,13 +7,16 @@
 	"author": "João Abreu",
 	"license": "MIT",
 	"scripts": {
-		"start": "node ./src/index.js",
+		"start": "node ./src/index",
+		"create-commands": "node ./src/scripts/setup",
 		"lint": "pretty-quick --staged && lint-staged",
 		"prepare": "husky install",
 		"postinstall": "husky install"
 	},
 	"dependencies": {
-		"discord.js": "^12.5.3"
+		"discord.js": "^12.5.3",
+		"lowdb": "^1.0.0",
+		"slash-commands": "^1.4.0"
 	},
 	"devDependencies": {
 		"eslint": "^7.24.0",
