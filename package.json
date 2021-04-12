@@ -9,9 +9,9 @@
 	"scripts": {
 		"start": "node ./src/index",
 		"create-commands": "node ./src/scripts/setup",
-		"lint": "pretty-quick --staged && lint-staged",
-		"prepare": "husky install",
-		"postinstall": "husky install"
+		"lint": "eslint . --ext .js --quiet",
+		"prettier": "prettier \"src/**/*.js\" --write",
+		"postinstall": "git config core.hooksPath ./git-hooks"
 	},
 	"dependencies": {
 		"discord.js": "^12.5.3",
@@ -22,13 +22,8 @@
 		"eslint": "^7.24.0",
 		"eslint-config-airbnb-base": "^14.2.1",
 		"eslint-config-prettier": "^8.1.0",
+		"eslint-plugin-import": "^2.22.1",
 		"eslint-plugin-prettier": "^3.3.1",
-		"husky": "^6.0.0",
-		"lint-staged": ">=10",
-		"prettier": "^2.2.1",
-		"pretty-quick": "^3.1.0"
-	},
-	"lint-staged": {
-		"*.js": "eslint --fix"
+		"prettier": "^2.2.1"
 	}
 }
