@@ -31,7 +31,7 @@ module.exports = (client, { id, token }) => {
 	}>** in a gruesome massacre.`;
 
 	if (info) {
-		message += ` Someone added: **${info}**`;
+		message += ` Allegedly, someone added: **${info}**`;
 	}
 
 	client.api.interactions(id, token).callback.post({
