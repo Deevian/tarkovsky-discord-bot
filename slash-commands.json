@@ -66,27 +66,27 @@
 								"choices": [
 									{
 										"name": "Interchange",
-										"value": "interchange"
+										"value": "Interchange"
 									},
 									{
 										"name": "Customs",
-										"value": "customs"
+										"value": "Customs"
 									},
 									{
 										"name": "Shoreline",
-										"value": "shoreline"
+										"value": "Shoreline"
 									},
 									{
 										"name": "Reserve",
-										"value": "reserve"
+										"value": "Reserve"
 									},
 									{
 										"name": "Factory",
-										"value": "factory"
+										"value": "Factory"
 									},
 									{
 										"name": "Labs",
-										"value": "labs"
+										"value": "Labs"
 									}
 								]
 							},

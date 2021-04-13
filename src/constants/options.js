@@ -1,0 +1,8 @@
+module.exports = {
+	OPTION_TEAMKILL_MURDERER: "murderer",
+	OPTION_TEAMKILL_VICTIM: "victim",
+	OPTION_TEAMKILL_MAP: "map",
+	OPTION_TEAMKILL_INFO: "info",
+	OPTION_TEAMKILL_TIMESTAMP: "timestamp",
+	OPTION_TEAMKILL_ID: "id",
+};

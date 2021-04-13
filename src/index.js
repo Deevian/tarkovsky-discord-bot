@@ -1,10 +1,16 @@
 const fs = require("fs");
 const Discord = require("discord.js");
+
+const dayjs = require("dayjs");
+const relativeTime = require("dayjs/plugin/relativeTime");
+
 const config = require("../config.json");
 const noop = require("./commands/utility/noop");
 
+// Setup relative time for DayJS
+dayjs.extend(relativeTime);
+
 const setupClient = (client) => {
-	// eslint-disable-next-line no-param-reassign
 	client.commands = new Discord.Collection();
 
 	fs.readdirSync(`${__dirname}/commands`).forEach((folder) => {

@@ -20,6 +20,8 @@
 			}
 		],
 		"consistent-return": "off",
-		"prettier/prettier": "error"
+		"prettier/prettier": "error",
+		"no-console": "off",
+		"no-param-reassign": "off"
 	}
 }

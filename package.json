@@ -14,11 +14,13 @@
 		"postinstall": "git config core.hooksPath ./git-hooks"
 	},
 	"dependencies": {
+		"dayjs": "^1.10.4",
 		"discord.js": "^12.5.3",
 		"global": "^4.4.0",
 		"lowdb": "^1.0.0",
 		"nodemon": "^2.0.7",
-		"slash-commands": "^1.4.0"
+		"slash-commands": "^1.4.0",
+		"uuid": "^8.3.2"
 	},
 	"devDependencies": {
 		"eslint": "^7.24.0",
