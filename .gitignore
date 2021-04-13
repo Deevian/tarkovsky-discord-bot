@@ -4,3 +4,4 @@ config.json
 node_modules
 stats
 .husky
+db.json
