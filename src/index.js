@@ -4,6 +4,7 @@ const config = require("../config.json");
 const noop = require("./commands/utility/noop");
 
 const setupClient = (client) => {
+	// eslint-disable-next-line no-param-reassign
 	client.commands = new Discord.Collection();
 
 	fs.readdirSync(`${__dirname}/commands`).forEach((folder) => {
@@ -12,6 +13,7 @@ const setupClient = (client) => {
 			.filter((file) => file.endsWith(".js"));
 
 		commandFiles.forEach((file) => {
+			// eslint-disable-next-line global-require,import/no-dynamic-require
 			const command = require(`${__dirname}/commands/${folder}/${file}`);
 
 			client.commands.set(`${folder}__${file.replace(".js", "")}`, command);

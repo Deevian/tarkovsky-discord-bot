@@ -23,6 +23,7 @@
 				"tsx": "never"
 			}
 		],
+		"consistent-return": "off",
 		"prettier/prettier": "error"
 	}
 }

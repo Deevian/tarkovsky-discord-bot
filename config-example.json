@@ -1,6 +1,5 @@
 {
 	"applicationId": "your-application-id-here",
 	"publicKey": "your-public-key-here",
-	"token": "your-token-id-here",
-	"prefix": "!"
+	"token": "your-token-id-here"
 }
