@@ -10,7 +10,7 @@
 		"start": "node ./src/index",
 		"create-commands": "node ./src/scripts/setup",
 		"lint": "eslint . --ext .js --quiet",
-		"prettier": "prettier \"src/**/*.js\" --write",
+		"prettier": "prettier \"src/**/*.js\" --write --loglevel silent",
 		"postinstall": "git config core.hooksPath ./git-hooks"
 	},
 	"dependencies": {
