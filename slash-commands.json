@@ -42,6 +42,19 @@
 						]
 					},
 					{
+						"name": "list",
+						"description": "List team kills",
+						"type": 1,
+						"options": [
+							{
+								"name": "page",
+								"description": "The page of the list",
+								"type": 4,
+								"required": false
+							}
+						]
+					},
+					{
 						"name": "report",
 						"description": "Report a team kill",
 						"type": 1,

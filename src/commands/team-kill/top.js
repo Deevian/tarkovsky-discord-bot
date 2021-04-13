@@ -71,22 +71,19 @@ module.exports = (client, { id, token }) => {
 		return;
 	}
 
-	const table = new AsciiTable("Most Dangerous Cowboys");
+	const table = new AsciiTable("Most Dangerous of Tarkovland");
 
-	table.setHeading("Kills", "Player", "Fav. Prey", "Fav. Map");
+	table.setHeading("Kills", "Player", "Favorite Prey", "Favorite Location");
+	table.setAlign(0, AsciiTable.CENTER);
+
 	result.forEach((entry) => {
 		table.addRow(entry.kills, entry.name, entry.topVictim, entry.topMap);
 	});
 
-	table.setAlign(0, AsciiTable.CENTER);
-
 	client.api.interactions(id, token).callback.post({
 		data: {
 			type: 4,
-			data: {
-				content: `\`\`\`${table.toString()}\`\`\``,
-				allowed_mentions: { users: [] },
-			},
+			data: { content: `\`\`\`${table.toString()}\`\`\`` },
 		},
 	});
 };
