@@ -27,9 +27,9 @@ module.exports = (client, { id, token }) => {
 		data: {
 			type: 4,
 			data: {
-				content: `Time Since Last Incident: **${dayjs(timestamp).fromNow(
-					true
-				)}**`,
+				content: `Time Since Last Incident: **${dayjs
+					.unix(timestamp)
+					.fromNow(true)}**`,
 			},
 		},
 	});

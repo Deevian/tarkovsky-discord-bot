@@ -1,4 +1,5 @@
 const { v4 } = require("uuid");
+const dayjs = require("dayjs");
 const getDatabaseInstance = require("../../utils/getDatabaseInstance");
 const { TABLE_TEAMKILLS } = require("../../constants/db");
 const {
@@ -6,6 +7,7 @@ const {
 	OPTION_TEAMKILL_VICTIM,
 	OPTION_TEAMKILL_MAP,
 	OPTION_TEAMKILL_INFO,
+	OPTION_TEAMKILL_DATE,
 } = require("../../constants/options");
 
 const getUser = (interaction, userId) => ({
@@ -34,11 +36,23 @@ module.exports = (client, interaction, options) => {
 		return;
 	}
 
+	const date = dayjs(report[OPTION_TEAMKILL_DATE] || undefined);
+	if (!date.isValid()) {
+		client.api.interactions(interaction.id, interaction.token).callback.post({
+			data: {
+				type: 4,
+				data: { content: "The inserted date is invalid" },
+			},
+		});
+
+		return;
+	}
+
 	getDatabaseInstance()
 		.get(TABLE_TEAMKILLS)
 		.push({
 			id: v4(),
-			timestamp: Date.now(),
+			timestamp: date.unix(),
 			map: report[OPTION_TEAMKILL_MAP],
 			murderer: getUser(interaction, report[OPTION_TEAMKILL_MURDERER]),
 			victim: getUser(interaction, report[OPTION_TEAMKILL_VICTIM]),

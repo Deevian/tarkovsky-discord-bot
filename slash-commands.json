@@ -51,6 +51,12 @@
 								"description": "The page of the list",
 								"type": 4,
 								"required": false
+							},
+							{
+								"name": "with-id",
+								"description": "Whether the list should include the IDs or not",
+								"type": 5,
+								"required": false
 							}
 						]
 					},
@@ -108,6 +114,25 @@
 								"description": "Additional info on the event",
 								"type": 3,
 								"required": false
+							},
+							{
+								"name": "date",
+								"description": "When the event has occurred, in a DD/MM/YYYY format",
+								"type": 3,
+								"required": false
+							}
+						]
+					},
+					{
+						"name": "remove",
+						"description": "Remove a team kill entry",
+						"type": 1,
+						"options": [
+							{
+								"name": "id",
+								"description": "The ID of the team kill",
+								"type": 3,
+								"required": true
 							}
 						]
 					}

@@ -5,4 +5,5 @@ module.exports = {
 	OPTION_TEAMKILL_INFO: "info",
 	OPTION_TEAMKILL_TIMESTAMP: "timestamp",
 	OPTION_TEAMKILL_ID: "id",
+	OPTION_TEAMKILL_DATE: "date",
 };

@@ -32,6 +32,7 @@ const createCommands = async () => {
 		)
 	);
 
+	console.log(JSON.stringify(response));
 	if (response[0].errors) {
 		console.dir(response);
 	} else {

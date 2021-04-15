@@ -22,9 +22,9 @@ module.exports = (client, { id, token }) => {
 	}
 
 	const { map, murderer, victim, info, timestamp } = result[0];
-	let message = `The last incident occurred **${dayjs(
-		timestamp
-	).fromNow()}** at **${map}** when **<@${
+	let message = `The last incident occurred **${dayjs
+		.unix(timestamp)
+		.fromNow()}** at **${map}** when **<@${
 		victim.id
 	}>** was mercilessly gunned down by **<@${
 		murderer.id
