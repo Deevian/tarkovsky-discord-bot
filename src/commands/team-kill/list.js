@@ -8,14 +8,14 @@ module.exports = (client, { id, token }, options = []) => {
 	const pageOption = options.find((option) => option.name === "page");
 	const withId = options.find((option) => option.name === "with-id");
 
-	const itemsPerPage = 10;
+	const itemsPerPage = 5;
 	const page = (pageOption && pageOption.value) || 1;
 
 	const result = getDatabaseInstance()
 		.get(TABLE_TEAMKILLS)
 		.orderBy(OPTION_TEAMKILL_TIMESTAMP, "desc")
 		.drop(itemsPerPage * (page - 1))
-		.take(10)
+		.take(itemsPerPage)
 		.value();
 
 	if (!result.length) {
